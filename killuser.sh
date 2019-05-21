@@ -47,14 +47,14 @@ DoKill(){
 	CheckMe
 	CheckAllUsers
 	if [ ${users_total} = "1" ]; then
-		echo -e "当前终端为唯一 ssh 在线用户，当前用户连接信息："
+		echo -e "当前终端为唯一 ssh 在线用户，当前用户连接信息: "
 		who am i
 		exit 1
 	else
-		echo -e "当前系统共有 ${green}${users_total}${none} 在线用户,连接信息如下："
+		echo -e "当前系统共有 ${green}${users_total}${none} 在线用户,连接信息如下: "
 		w -s -h
 		echo -e "其中当前终端(自己)为 ${green}${user_num}${none} 号用户，请选择要结束会话的用户编号。"
-		read -e -p "输入数字进行选择:" kill_num
+		read -e -p "输入数字进行选择: " kill_num
         KillUser
 	fi
 }
