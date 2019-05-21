@@ -19,7 +19,7 @@ CheckAllUsers(){
 #结束用户及其进程
 KillUser(){
 	if  [ ! -n "$kill_num" ] ; then
-		echo -e "${red}输入错误${none}，请确认输入为整数" 
+		echo -e "${red}输入错误${none}，请确认输入为整数。" 
 		exit 1
     else
         case "$kill_num" in 
@@ -35,7 +35,7 @@ KillUser(){
             fi
             ;; 
             *)
-          	echo -e "${red}输入错误${none}，请确认输入为整数" 
+          	echo -e "${red}输入错误${none}，请确认输入为整数。" 
            	exit 1
             ;; 
         esac 
